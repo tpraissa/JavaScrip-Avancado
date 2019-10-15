@@ -4,7 +4,7 @@ class NegociacaoController{
         let $ = document.querySelector.bind(document);
         this._inputData = $('#data');
         this._inputQuantidade = $('#quantidade');
-        this.inputValor = $('#valor');
+        this._inputValor = $('#valor');
     }
     adiciona(event){
         event.preventDefault();
@@ -21,6 +21,10 @@ class NegociacaoController{
             this._inputValor.value
         );
 
-        console.log(negociacao);
+        let diaMesAno = negociacao.data.getDate() 
+            + '/' + (negociacao.data.getMonth() + 1)
+            + '/' + negociacao.data.getFullYear();
+
+        console.log(diaMesAno);
     }
 }
