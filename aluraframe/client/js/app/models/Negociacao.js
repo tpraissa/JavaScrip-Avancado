@@ -13,7 +13,7 @@ class Negociacao {
 
     get quantidade(){
         return this._quantidade;
-    }
+    }   
 
     get valor(){
         return this._valor;
